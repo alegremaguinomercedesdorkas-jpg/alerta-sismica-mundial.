@@ -6,7 +6,7 @@
 <div class="panel"><h2>🗺️ Mapa mundial de epicentros</h2><div id="quakeMap" role="application" aria-label="Mapa mundial de epicentros sísmicos"></div><p class="mapnote">Los círculos muestran ubicaciones reportadas por IGP y USGS. Pulsa un marcador para ver sus datos y abrir la fuente. Mapa base © OpenStreetMap.</p></div>\n<div class="panel"><h2>🌐 Sismos recientes</h2><p class="small">Perú: IGP / CENSIS · Resto del mundo: USGS</p><div id="events">Cargando reportes oficiales…</div></div>
 <div class="panel"><h2>Fuentes oficiales</h2><p>🇵🇪 <a href="https://ultimosismo.igp.gob.pe/productos/reportes-sismicos" target="_blank" rel="noopener">IGP – Centro Sismológico Nacional (CENSIS)</a></p><p>🌎 <a href="https://earthquake.usgs.gov/earthquakes/feed/" target="_blank" rel="noopener">USGS – Catálogo y feeds sísmicos</a></p></div>
 <div class="panel warning"><b>Importante:</b> Esta aplicación es informativa; no es un sistema oficial de alerta temprana, no predice terremotos y no garantiza avisos inmediatos. Los reportes pueden ser preliminares, corregirse o publicarse con retraso. No reemplaza al IGP, SISMATE, INDECI ni las indicaciones de Defensa Civil. En una emergencia, sigue los canales oficiales.</div>
-</main><script>
+</main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script>
 const usgsFeed='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson';
 const igpQuery='https://ide.igp.gob.pe/arcgis/rest/services/monitoreocensis/SismosReportados/MapServer/0/query';
 let pos=null,seen=new Set(),first=true;
